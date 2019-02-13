@@ -1,0 +1,17 @@
+<h1>La plus jolie liste des restaurants</h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <%= restaurant.name %>
+      <%= restaurant.address %>
+      <%= restaurant.phone_number %>
+      <%= restaurant.category %>
+      <%= link_to "détails", restaurant_path(restaurant) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a joli restaurant", new_restaurant_path, class: "btn btn-success" %>
+
+
+
